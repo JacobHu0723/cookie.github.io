@@ -34,7 +34,7 @@ function savecookie(){
 }
 window.onload=function(){
     var cont=getCookie("cont");
-    if(cont) document.getElementById("te").value=cont;
+    if(cont) document.getElementById("recording-table").value=cont;
 }
 </script>
 </head>
@@ -50,7 +50,7 @@ window.onload=function(){
 			<th>最低CPS</th>
 			<th>平均CPS</th>
 		</tr>
-</table> <input type=button value="保存记录" id=cook onclick=savecookie() />
+</table> <input type=button value="保存记录" id=recording-table onclick=savecookie() />
     </div>
  
 </body>
