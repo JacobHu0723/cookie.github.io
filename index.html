@@ -25,7 +25,7 @@ function getCookie(name) {
         return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex))
 }
 function savecookie(){
-         var cont=document.getElementById("te").value;
+         var cont=document.getElementById("recording-table").value;
          if(cont){
          var data=new Date();
          data.setTime(data.getTime() + 1*24*3600*1000*1000); //对应天,小时,秒,自己换算设置
@@ -40,8 +40,18 @@ window.onload=function(){
 </head>
 <body>
  
-    <div >
-       <input type=area id="te" ><input type=button value="保存进cookie" id=cook onclick=savecookie() />
+    <div>
+       <table border="1" id="recording-table" style="display: none;">
+       <input type=button value="保存记录" id=cook onclick=savecookie() />
+	<tbody>
+		<tr>
+			<th>点击次数</th>
+			<th>最高CPS</th>
+			<th>最低CPS</th>
+			<th>平均CPS</th>
+		</tr>
+	</tbody>
+</table>
     </div>
  
 </body>
